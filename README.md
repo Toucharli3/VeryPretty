@@ -39,10 +39,11 @@ Autres scripts : `npm run build` (build de production), `npm run start`
 
 ## 📸 Images à fournir — IMPORTANT
 
-Les fichiers image **ne sont pas inclus** dans le dépôt : déposez vos propres
-photos aux emplacements et noms **exacts** ci-dessous. Le code les référence
-déjà. Tant qu'une image est absente, un dégradé pastel s'affiche à sa place
-(le site reste présentable).
+Des **images d'illustration** (dégradés pastel avec le nom de la boutique) sont
+**déjà incluses** pour que le site soit présentable immédiatement. Remplacez-les
+par vos vraies photos aux emplacements et noms **exacts** ci-dessous — le code
+les référence déjà, il suffit d'écraser les fichiers. Chaque visuel porte la
+mention « Photo d'illustration — à remplacer ».
 
 | Fichier | Chemin exact | Usage | Format conseillé |
 | --- | --- | --- | --- |
