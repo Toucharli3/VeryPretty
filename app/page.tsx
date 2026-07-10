@@ -6,6 +6,7 @@ import Gallery from '@/components/Gallery';
 import Reviews from '@/components/Reviews';
 import Info from '@/components/Info';
 import Footer from '@/components/Footer';
+import QuickContact from '@/components/QuickContact';
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
         <Info />
       </main>
       <Footer />
+      <QuickContact />
     </>
   );
 }

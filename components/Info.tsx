@@ -1,4 +1,4 @@
-import { site, openingHours, services } from '@/lib/site';
+import { site, openingHours, services, access } from '@/lib/site';
 
 function PinIcon() {
   return (
@@ -156,6 +156,19 @@ export default function Info() {
               referrerPolicy="no-referrer-when-downgrade"
               allowFullScreen
             />
+          </div>
+        </div>
+
+        {/* Venir à la boutique — accès & stationnement */}
+        <div className="mt-8 rounded-3xl border border-blush-100 bg-white p-7 shadow-sm sm:p-9">
+          <h3 className="font-serif text-2xl text-plum">Venir à la boutique</h3>
+          <div className="mt-6 grid gap-6 sm:grid-cols-3">
+            {access.map((item) => (
+              <div key={item.title}>
+                <p className="font-semibold text-rose-600">{item.title}</p>
+                <p className="mt-1.5 text-plum/75">{item.text}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>

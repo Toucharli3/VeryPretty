@@ -52,6 +52,22 @@ export const services = [
   'Boutique accessible aux personnes à mobilité réduite',
 ] as const;
 
+// Accès & stationnement — informations vérifiées sur Quimper centre-ville
+export const access = [
+  {
+    title: 'En centre-ville piéton',
+    text: "Au cœur du centre historique et piéton de Quimper, sur la rue pavée du Chapeau Rouge, entre les Halles et la place Saint-Corentin.",
+  },
+  {
+    title: 'Parkings à proximité',
+    text: "Plusieurs parkings publics à quelques minutes à pied : Chapeau Rouge, Théâtre de Cornouaille (couvert), Providence et Tour d'Auvergne.",
+  },
+  {
+    title: 'En train',
+    text: "À une dizaine de minutes à pied de la gare SNCF de Quimper (place Louis Armand).",
+  },
+] as const;
+
 // Horaires — à vérifier avant mise en ligne
 export const openingHours = [
   { day: 'Lundi', hours: '14h00 – 19h00' },
