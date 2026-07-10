@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { asset } from '@/lib/site';
+import { asset, brands, site } from '@/lib/site';
 
 export default function About() {
   return (
@@ -39,12 +39,12 @@ export default function About() {
 
           <dl className="mt-9 grid grid-cols-3 gap-4 border-t border-blush-100 pt-8">
             <div>
-              <dt className="text-sm text-plum/60">Note clients</dt>
-              <dd className="mt-1 font-serif text-2xl text-rose-500">4,5/5</dd>
+              <dt className="text-sm text-plum/60">Note Google</dt>
+              <dd className="mt-1 font-serif text-2xl text-rose-500">{site.rating.value}/5</dd>
             </div>
             <div>
               <dt className="text-sm text-plum/60">Marques</dt>
-              <dd className="mt-1 font-serif text-2xl text-rose-500">7+</dd>
+              <dd className="mt-1 font-serif text-2xl text-rose-500">{brands.length}+</dd>
             </div>
             <div>
               <dt className="text-sm text-plum/60">Au cœur de</dt>

@@ -1,4 +1,4 @@
-import { site, openingHours } from '@/lib/site';
+import { site, openingHours, services } from '@/lib/site';
 
 function PinIcon() {
   return (
@@ -22,6 +22,15 @@ function ClockIcon() {
     <svg viewBox="0 0 24 24" className="h-5 w-5 shrink-0 text-rose-500" fill="none" stroke="currentColor" strokeWidth={1.8}>
       <circle cx="12" cy="12" r="8.5" />
       <path strokeLinecap="round" d="M12 7.5V12l3 2" />
+    </svg>
+  );
+}
+
+function MailIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-5 w-5 shrink-0 text-rose-500" fill="none" stroke="currentColor" strokeWidth={1.8}>
+      <rect x="3" y="5" width="18" height="14" rx="2" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M4 7l8 6 8-6" />
     </svg>
   );
 }
@@ -67,6 +76,15 @@ export default function Info() {
                     {site.phone}
                   </a>
                 </li>
+                <li className="flex items-center gap-3">
+                  <MailIcon />
+                  <a
+                    href={`mailto:${site.email}`}
+                    className="break-all transition hover:text-rose-600"
+                  >
+                    {site.email}
+                  </a>
+                </li>
               </ul>
 
               <div className="mt-6 flex flex-col gap-3 sm:flex-row">
@@ -104,6 +122,26 @@ export default function Info() {
                     </li>
                   );
                 })}
+              </ul>
+            </div>
+
+            <div className="rounded-3xl border border-blush-100 bg-white p-7 shadow-sm">
+              <h3 className="font-serif text-2xl text-plum">Bon à savoir</h3>
+              <ul className="mt-5 space-y-3">
+                {services.map((service) => (
+                  <li key={service} className="flex items-start gap-3 text-plum/80">
+                    <svg
+                      viewBox="0 0 24 24"
+                      className="mt-0.5 h-5 w-5 shrink-0 text-rose-500"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth={1.8}
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M20 6L9 17l-5-5" />
+                    </svg>
+                    {service}
+                  </li>
+                ))}
               </ul>
             </div>
           </div>

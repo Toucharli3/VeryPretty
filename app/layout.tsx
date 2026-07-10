@@ -65,6 +65,7 @@ const jsonLd = {
   description: site.description,
   url: site.url,
   telephone: site.phoneHref,
+  email: site.email,
   image: `${site.url}/images/hero.jpg`,
   priceRange: '€€',
   currenciesAccepted: 'EUR',
@@ -78,11 +79,11 @@ const jsonLd = {
   },
   geo: {
     '@type': 'GeoCoordinates',
-    latitude: 47.9962,
-    longitude: -4.1029,
+    latitude: site.maps.lat,
+    longitude: site.maps.lng,
   },
   openingHoursSpecification: openingHoursSchema,
-  sameAs: [site.facebook],
+  sameAs: [site.facebook, site.instagram],
   aggregateRating: {
     '@type': 'AggregateRating',
     ratingValue: site.rating.value,

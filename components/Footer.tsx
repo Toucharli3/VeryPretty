@@ -8,6 +8,16 @@ function FacebookIcon() {
   );
 }
 
+function InstagramIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth={1.8} aria-hidden="true">
+      <rect x="3" y="3" width="18" height="18" rx="5" />
+      <circle cx="12" cy="12" r="4" />
+      <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
+
 export default function Footer() {
   const year = new Date().getFullYear();
 
@@ -44,15 +54,28 @@ export default function Footer() {
             <p className="text-sm font-semibold uppercase tracking-wider text-cream/50">
               Nous suivre
             </p>
-            <a
-              href={site.facebook}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-3 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/20"
-            >
-              <FacebookIcon />
-              Facebook
-            </a>
+            <div className="mt-3 flex flex-wrap gap-3">
+              <a
+                href={site.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Very Pretty sur Facebook"
+                className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/20"
+              >
+                <FacebookIcon />
+                Facebook
+              </a>
+              <a
+                href={site.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Very Pretty sur Instagram"
+                className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/20"
+              >
+                <InstagramIcon />
+                Instagram
+              </a>
+            </div>
           </div>
         </div>
 

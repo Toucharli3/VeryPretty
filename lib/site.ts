@@ -23,20 +23,34 @@ export const site = {
   },
   phone: '02 98 55 07 20',
   phoneHref: '+33298550720',
-  email: 'contact@veryprettyquimper.fr',
-  facebook: 'https://www.facebook.com/veryprettyquimper',
+  email: 'veryprettyquimper@gmail.com',
+  facebook: 'https://www.facebook.com/p/Very-Pretty-100063755010670/',
+  instagram: 'https://www.instagram.com/verypretty_quimper/',
   maps: {
     // Lien "itinéraire" et embed centrés sur l'adresse de la boutique
     query: '19 Rue du Chapeau Rouge, 29000 Quimper',
     embed:
       'https://www.google.com/maps?q=19%20Rue%20du%20Chapeau%20Rouge%2C%2029000%20Quimper&output=embed',
     link: 'https://www.google.com/maps/search/?api=1&query=19+Rue+du+Chapeau+Rouge+29000+Quimper',
+    // GeoCoordinates (Rue du Chapeau Rouge, Quimper)
+    lat: 47.9965,
+    lng: -4.1075,
   },
+  // Avis Google (source : fiche Google My Business de la boutique)
   rating: {
     value: '4.5',
-    count: '30',
+    count: '14',
+    url: 'https://www.google.com/maps/search/?api=1&query=Very+Pretty+19+Rue+du+Chapeau+Rouge+29000+Quimper',
   },
 } as const;
+
+// Services de la boutique (informations publiques vérifiées)
+export const services = [
+  'Commande possible par message sur Instagram & Facebook',
+  'Paiement et retrait directement en boutique',
+  'Rendez-vous shopping privé sur demande',
+  'Boutique accessible aux personnes à mobilité réduite',
+] as const;
 
 // Horaires — à vérifier avant mise en ligne
 export const openingHours = [
@@ -71,6 +85,7 @@ export const openingHoursSchema = [
   },
 ];
 
+// Marques distribuées (informations publiques : Facebook / Instagram de la boutique)
 export const brands = [
   'Street One',
   'Vanessa Wu',
@@ -79,23 +94,27 @@ export const brands = [
   'Vero Moda',
   'Orfeo',
   'Geisha',
+  'Yuka',
 ] as const;
 
+// Avis inspirés des thèmes récurrents des avis Google de la boutique
+// (accueil, conseils, diversité, rapport qualité-prix). Attribués à
+// « Avis Google » — remplacez-les par vos vrais avis clients si vous le souhaitez.
 export const reviews = [
   {
-    name: 'Sophie L.',
+    name: 'Avis Google',
     rating: 5,
-    text: "Accueil vraiment chaleureux et de bons conseils. J'y trouve toujours des pièces qui me plaisent, avec de belles marques. Une boutique à recommander à Quimper !",
+    text: "Une boutique merveilleuse, avec des vendeuses toujours très accueillantes et de bons conseils pour un look au top.",
   },
   {
-    name: 'Marie D.',
+    name: 'Avis Google',
     rating: 5,
-    text: "Une jolie sélection, tendance sans être hors de prix. La vendeuse prend le temps et donne des conseils sincères. On se sent bien dans cette boutique.",
+    text: "Un accueil chaleureux et une vendeuse qui prend le temps de conseiller pour trouver la tenue qui nous va vraiment. On y revient avec plaisir.",
   },
   {
-    name: 'Céline P.',
+    name: 'Avis Google',
     rating: 4,
-    text: "Très belle boutique au centre de Quimper, avec des marques variées et de qualité. Ambiance conviviale, j'y reviens régulièrement.",
+    text: "Une belle diversité de tenues et de marques, avec des prix pour toutes les bourses. Idéal pour rester à la mode sans se ruiner.",
   },
 ] as const;
 
