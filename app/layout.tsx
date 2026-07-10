@@ -44,12 +44,21 @@ export const metadata: Metadata = {
       "Boutique de prêt-à-porter féminin au cœur de Quimper. Marques tendance et accueil chaleureux.",
     images: [
       {
-        url: '/images/hero.jpg',
+        // URL absolue (inclut le basePath) : une URL relative serait résolue
+        // contre l'origine et perdrait le préfixe /VeryPretty.
+        url: `${site.url}/images/og.jpg`,
         width: 1200,
         height: 630,
-        alt: 'Devanture de la boutique Very Pretty à Quimper',
+        alt: 'Very Pretty — prêt-à-porter féminin à Quimper',
       },
     ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Very Pretty — Prêt-à-porter féminin à Quimper',
+    description:
+      "Boutique de prêt-à-porter féminin au cœur de Quimper. Marques tendance et accueil chaleureux.",
+    images: [`${site.url}/images/og.jpg`],
   },
   robots: {
     index: true,
