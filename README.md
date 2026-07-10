@@ -78,7 +78,28 @@ Les informations éditables sont centralisées dans **`lib/site.ts`** :
   affiner si besoin
 - **Avis clients** (`reviews`) : remplacer par de vrais témoignages
 
-## 🚀 Déploiement sur Vercel
+## 🚀 Déploiement sur GitHub Pages (recommandé, 100 % GitHub)
+
+Le site est configuré pour être hébergé **gratuitement par GitHub**, sans compte
+externe. Un workflow GitHub Actions (`.github/workflows/deploy.yml`) construit le
+site et le publie à chaque push sur `main`.
+
+Une seule action manuelle, **une seule fois** :
+
+1. Sur GitHub, ouvrez **Settings → Pages**.
+2. Sous **Build and deployment → Source**, choisissez **GitHub Actions**.
+3. C'est tout. À chaque push sur `main`, le site se redéploie automatiquement.
+
+Le site sera en ligne à l'adresse :
+**`https://<votre-compte>.github.io/VeryPretty/`**
+(par ex. `https://toucharli3.github.io/VeryPretty/`).
+
+> Le workflow détecte automatiquement le sous-chemin `/VeryPretty` (via
+> `actions/configure-pages`) et le passe au build (`NEXT_PUBLIC_BASE_PATH`),
+> pour que le CSS, le JS et les images se chargent correctement.
+> Suivez l'avancement du déploiement dans l'onglet **Actions** du dépôt.
+
+## 🚀 Alternative — Déploiement sur Vercel
 
 1. Poussez ce dépôt sur GitHub (déjà fait si vous lisez ceci sur GitHub).
 2. Sur [vercel.com](https://vercel.com), cliquez **Add New… → Project** et

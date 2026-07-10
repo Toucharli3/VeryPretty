@@ -1,6 +1,12 @@
 // Données de la boutique, centralisées pour être réutilisées par les composants
 // et le SEO (schema.org). À vérifier avant mise en ligne.
 
+// Préfixe les chemins d'assets locaux avec le basePath (ex. "/VeryPretty" sur
+// GitHub Pages), car next/image en mode `unoptimized` ne l'applique pas au src.
+// Vide en local et sur un domaine racine.
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+export const asset = (path: string) => `${basePath}${path}`;
+
 export const site = {
   name: 'Very Pretty',
   tagline: 'Prêt-à-porter féminin au cœur de Quimper',
@@ -94,10 +100,10 @@ export const reviews = [
 // Images de la galerie — les fichiers doivent être déposés dans
 // public/images/gallery/ (voir README).
 export const gallery = [
-  { src: '/images/gallery/gallery-1.jpg', alt: "Sélection de vêtements dans la boutique Very Pretty à Quimper" },
-  { src: '/images/gallery/gallery-2.jpg', alt: 'Présentation de tenues tendance en boutique' },
-  { src: '/images/gallery/gallery-3.jpg', alt: 'Accessoires et chaussures femme chez Very Pretty' },
-  { src: '/images/gallery/gallery-4.jpg', alt: "Détail d'un rayon de prêt-à-porter féminin" },
-  { src: '/images/gallery/gallery-5.jpg', alt: 'Ambiance chaleureuse de la boutique Very Pretty' },
-  { src: '/images/gallery/gallery-6.jpg', alt: 'Vitrine et mise en scène des collections de la boutique' },
-] as const;
+  { src: asset('/images/gallery/gallery-1.jpg'), alt: "Sélection de vêtements dans la boutique Very Pretty à Quimper" },
+  { src: asset('/images/gallery/gallery-2.jpg'), alt: 'Présentation de tenues tendance en boutique' },
+  { src: asset('/images/gallery/gallery-3.jpg'), alt: 'Accessoires et chaussures femme chez Very Pretty' },
+  { src: asset('/images/gallery/gallery-4.jpg'), alt: "Détail d'un rayon de prêt-à-porter féminin" },
+  { src: asset('/images/gallery/gallery-5.jpg'), alt: 'Ambiance chaleureuse de la boutique Very Pretty' },
+  { src: asset('/images/gallery/gallery-6.jpg'), alt: 'Vitrine et mise en scène des collections de la boutique' },
+];

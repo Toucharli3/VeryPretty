@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { site } from '@/lib/site';
+import { site, asset } from '@/lib/site';
 
 export default function Hero() {
   return (
@@ -9,7 +9,7 @@ export default function Hero() {
 
       {/* Photo de la vitrine / devanture (format large) */}
       <Image
-        src="/images/hero.jpg"
+        src={asset('/images/hero.jpg')}
         alt="Devanture de la boutique Very Pretty, 19 Rue du Chapeau Rouge à Quimper"
         fill
         priority

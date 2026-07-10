@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { asset } from '@/lib/site';
 
 export default function About() {
   return (
@@ -6,7 +7,7 @@ export default function About() {
       <div className="container-narrow grid items-center gap-12 lg:grid-cols-2">
         <div className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl bg-gradient-to-br from-blush-100 to-rose-100 shadow-xl">
           <Image
-            src="/images/about.jpg"
+            src={asset('/images/about.jpg')}
             alt="Intérieur chaleureux de la boutique Very Pretty à Quimper"
             fill
             sizes="(max-width: 1024px) 100vw, 50vw"
