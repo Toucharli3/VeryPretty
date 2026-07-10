@@ -12,7 +12,9 @@ export const site = {
   tagline: 'Prêt-à-porter féminin au cœur de Quimper',
   description:
     "Boutique de prêt-à-porter féminin au cœur de Quimper. Découvrez une sélection branchée de marques tendance dans une ambiance chaleureuse et conviviale.",
-  url: 'https://www.veryprettyquimper.fr',
+  // URL publique du site. À remplacer par votre nom de domaine le jour où
+  // vous en aurez un (ex. https://www.veryprettyquimper.fr).
+  url: 'https://toucharli3.github.io/VeryPretty',
   address: {
     street: '19 Rue du Chapeau Rouge',
     postalCode: '29000',
